@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>girl game</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link src="style.css" rel="stylesheet">
+    <script src="phaser-2.6.2/build/phaser.min.js"></script>    
+    <script src="BootState.js"></script>
+    <script src="PLState.js"></script>
+    <script src ="GameState.js"> </script>
+  </head>
+
+  <body>
+  <div id="gameContainer"> </div>
+  <script type="text/javascript">
+  	(function(){
+      var game = new Phaser.Game(800, 460, Phaser.AUTO, 'gameContainer');
+      game.state.add('bs', BootState);
+      game.state.add('pls', PLState);
+      game.state.add('gs', GameState)
+      game.state.start('bs');
+})();
+  </script>
+
+  </body>
+</html>
